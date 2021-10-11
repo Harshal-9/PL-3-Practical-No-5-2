@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinTODec</title>
+</head>
+<body>
+    <section>
+        <h1 style="text-align: center;">A code in c++ that converts binary number to decimal number.</h1>
+    </section>
+    <br>
+    <hr>
+
+    <section>
+        <pre>
+        <code>
+            // C++ program to convert binary to decimal
+            #include <iostream>
+            using namespace std;
+            
+            // Function to convert binary to decimal
+            int binaryToDecimal(int n)
+            {
+                int num = n;
+                int dec_value = 0;
+            
+                // Initializing base value to 1, i.e 2^0
+                int base = 1;
+            
+                int temp = num;
+                while (temp) {
+                    int last_digit = temp % 10;
+                    temp = temp / 10;
+            
+                    dec_value += last_digit * base;
+            
+                    base = base * 2;
+                }
+            
+                return dec_value;
+            }
+            
+            // Driver program to test above function
+            int main()
+            {
+                int num = 10101001;
+            
+                cout << binaryToDecimal(num) << endl;
+            }
+
+        </code>
+        </pre>
+    </section>
+    <hr>
+
+    <section>
+        <kbd>Input : 111</kbd>
+    </section>
+    <hr>
+
+    <section>
+        <samp>Output : 7</samp>
+    </section>
+    <hr>
+
+    <section>
+        <var>Variables used : num, dec_value, base, temp</var>
+    </section>
+    <hr>
+    
+    <section>
+        <p>Time Complexity : O(|n|)</p>
+    </section>
+    <hr>
+
+    <section>
+        <p>Link : <a href="https://www.geeksforgeeks.org/program-binary-decimal-conversion/">https://www.geeksforgeeks.org/program-binary-decimal-conversion/
+        </a></p>
+    </section>
+    <hr>
+
+</body>
+
+<footer>
+    <p style="text-align: center;">&copy; 2019BTECS00029</p>
+</footer> 
+
+</html>
